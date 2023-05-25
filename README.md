@@ -27,11 +27,30 @@ git clone https://github.com/GCTMLP/otus_hasker.git
 ```
 cd otus-hasker
 ```
-3. Run docker containers in developer mode (if you want to add and test some changes)
+3. Create files .env.dev (if you want to add and test some changes) or .env.prod with your sensitive data.
+
+File structure like:
+```
+DEBUG=0
+SECRET_KEY=SECRET_KEY
+ALLOWED_HOSTS=www.your_host.ru
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=db_name
+SQL_USER=db_user
+SQL_PASSWORD=db_password
+SQL_HOST=db
+SQL_PORT=5432
+DATABASE=postgres
+EMAIL_HOST=smtp.gmail.com
+EMAIL_ADDRESS=your_mail
+EMAIL_PASSWORD=mail_password
+```
+
+4. Run docker containers in developer mode (if you want to add and test some changes)
 ```
 docker-compose -f docker-compose.yml up -d --build
 ```
-4. Or run docker containers in production mode
+5. Or run docker containers in production mode
 ```
 docker-compose -f docker-compose.prod.yml up -d --build
 ```
