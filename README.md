@@ -21,7 +21,7 @@ Technology stack is:
 
 1. Clone the repository
 ```
-git clone https://github.com/GCTMLP/otus_hasker.git
+git clone https://github.com/GCTMLP/hasker.git
 ```
 2. Clone the repository with staticfiles (CSS, JS)
 ```
