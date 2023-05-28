@@ -23,11 +23,19 @@ Technology stack is:
 ```
 git clone https://github.com/GCTMLP/otus_hasker.git
 ```
-2. Go to folder
+2. Clone the repository with staticfiles (CSS, JS)
+```
+git clone https://github.com/GCTMLP/assets.git
+```
+3. Copy assets to hasker project
+```
+cp -R asssets hasker/static
+```
+4. Go to folder
 ```
 cd otus-hasker
 ```
-3. Create files .env.dev (if you want to add and test some changes) or .env.prod with your sensitive data.
+5. Create files .env.dev (if you want to add and test some changes) or .env.prod with your sensitive data.
 
 File structure like:
 ```
@@ -46,11 +54,11 @@ EMAIL_ADDRESS=your_mail
 EMAIL_PASSWORD=mail_password
 ```
 
-4. Run docker containers in developer mode (if you want to add and test some changes)
+6. Run docker containers in developer mode (if you want to add and test some changes)
 ```
 docker-compose -f docker-compose.yml up -d --build
 ```
-5. Or run docker containers in production mode
+7. Or run docker containers in production mode
 ```
 docker-compose -f docker-compose.prod.yml up -d --build
 ```
