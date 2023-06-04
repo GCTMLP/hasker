@@ -52,6 +52,9 @@ DATABASE=postgres
 EMAIL_HOST=smtp.gmail.com
 EMAIL_ADDRESS=your_mail
 EMAIL_PASSWORD=mail_password
+POSTGRES_USER=pg_user
+POSTGRES_PASSWORD=pg_password
+POSTGRES_DB=pg_db
 ```
 
 6. Run docker containers in developer mode (if you want to add and test some changes)
