@@ -19,10 +19,8 @@ services:
     image: postgres:13.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=lipa
-      - POSTGRES_PASSWORD=lipa123
-      - POSTGRES_DB=hasker
+    env_file:
+      - .env.prod.db
 
   nginx:
     build: ./nginx
